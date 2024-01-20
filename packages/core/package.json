@@ -1,0 +1,21 @@
+{
+  "name": "@trpc-sst/core",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "sst bind vitest",
+    "typecheck": "tsc -noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "drizzle-kit": "^0.20.13",
+    "sst": "^2.39.7",
+    "vitest": "^1.2.1"
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "@planetscale/database": "^1.14.0",
+    "drizzle-orm": "^0.29.3",
+    "zod": "^3.22.4"
+  }
+}
