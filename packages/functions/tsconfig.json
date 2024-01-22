@@ -1,11 +1,5 @@
 {
-  "extends": "@tsconfig/node18/tsconfig.json",
-  "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@trpc-sst/core/*": ["../core/src/*"]
-    }
-  }
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {},
+  "exclude": ["node_modules"]
 }

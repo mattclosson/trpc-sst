@@ -1,8 +1,8 @@
 import * as trpc from "@trpc/server";
 import { z } from "zod";
 import { awsLambdaRequestHandler } from "@trpc/server/adapters/aws-lambda";
-import { db } from "@trpc-sst/core/drizzle";
-import { user } from "@trpc-sst/core/drizzle/schema";
+import { db } from "@core/drizzle";
+import { user } from "@core/drizzle/schema";
 
 const t = trpc.initTRPC.create();
 

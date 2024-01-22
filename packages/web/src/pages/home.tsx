@@ -1,14 +1,16 @@
 import { trpc } from "../utils/trpc";
 
 export default function Home() {
-  const hello = trpc.hello.useQuery("Matthew");
-
   const users = trpc.users.useQuery();
 
   return (
     <div>
-      <h1>{hello.data}</h1>
-      {users.data}
+      <h1>Users</h1>
+      <ul>
+        {users.data?.map((user) => (
+          <li key={user.id}>{user.email}</li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -1,8 +1,29 @@
 {
-  "extends": "@tsconfig/node18/tsconfig.json",
-  "exclude": ["packages"],
   "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "node"
-  }
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Bundled projects */
+    "lib": ["dom", "dom.iterable", "ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "incremental": true,
+
+    /* Path Aliases */
+    "baseUrl": "./packages",
+    "paths": {
+      "@core/*": ["core/src/*"],
+      "@functions/*": ["./packages/functions/src/*"],
+      "@web/*": ["./packages/web/src/*"]
+    }
+  },
+  "exclude": ["node_modules"]
 }
